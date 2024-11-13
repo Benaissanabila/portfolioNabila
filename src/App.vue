@@ -6,6 +6,7 @@ import AboutMe from './components/AboutMe.vue';
 import FloatingNav from './components/FloatingNav.vue';
 import Competences from './components/Competence.vue';
 import Portfolio from './components/Portfolio.vue';
+import Contact from './components/Contact.vue';
 // État réactif pour l'affichage de FloatingNav
 const showFloatingNav = ref(false);
 
@@ -35,6 +36,7 @@ onUnmounted(() => {
   <AboutMe/>
   <Competences/>
   <Portfolio/>
+  <Contact/>
   <RouterView />
 </template>
 
