@@ -27,7 +27,7 @@
     data() {
       return {
         activeSection: 'accueil',
-        activeSection: 'Profil',
+       
         navItems: [
           { id: 'accueil', name: 'Accueil', icon: 'fas fa-home' },
           { id: 'profil', name: 'Profil', icon: 'fas fa-user' },

@@ -64,15 +64,15 @@
   
   <script>
   import axios from 'axios';
-  
+  import { defineComponent } from 'vue';
   const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
 const RECIPIENT_EMAIL = import.meta.env.VITE_RECIPIENT_EMAIL;
 
 console.log('API Key:', BREVO_API_KEY);
 console.log('Recipient Email:', RECIPIENT_EMAIL);
   
-  export default {
-    name: 'ContactForm',
+  export default defineComponent({
+    name: 'Contact',
     data() {
       return {
         formData: {
@@ -162,7 +162,7 @@ console.log('Recipient Email:', RECIPIENT_EMAIL);
         }
       }
     }
-  };
+  });
   </script>
   
   <style scoped>

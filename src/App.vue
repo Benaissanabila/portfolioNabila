@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import Navbar from './components/Navbar.vue';
+import Navbar from '@/components/NavBar.vue';
 import HomeSection from './components/HomeSection.vue';
 import AboutMe from './components/AboutMe.vue';
 import FloatingNav from './components/FloatingNav.vue';
 import Competences from './components/Competence.vue';
 import Portfolio from './components/Portfolio.vue';
-import Contact from './components/Contact.vue';
+import Contact from '@/components/Contact.vue';
 // État réactif pour l'affichage de FloatingNav
 const showFloatingNav = ref(false);
 

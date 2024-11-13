@@ -35,9 +35,9 @@
                   <a v-if="project.github" :href="project.github" class="link-icon" target="_blank">
                     <i class="fab fa-github"></i>
                   </a>
-                  <a v-if="project.live" :href="project.live" class="link-icon" target="_blank">
+                  
                     <i class="fas fa-external-link-alt"></i>
-                  </a>
+                
                 </div>
               </div>
              

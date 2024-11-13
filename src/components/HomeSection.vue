@@ -107,30 +107,33 @@
   
       // Dessiner les connections et triangles
       const drawConnections = () => {
-        if (!ctx || !canvas.value) return;
+  if (!canvas.value) return;
+
+  // Utilisation de ctx avec l'opérateur de non-nullation
+  ctx!.clearRect(0, 0, canvas.value.width, canvas.value.height);
+
+  // Dessiner les connections
+  ctx!.beginPath();
+  ctx!.strokeStyle = 'rgba(101, 188, 200, 0.1)';
   
-        ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
-        
-        // Dessiner les connections
-        ctx.beginPath();
-        ctx.strokeStyle = 'rgba(101, 188, 200, 0.1)';
-        
-        points.value.forEach((point, i) => {
-          points.value.slice(i + 1).forEach(otherPoint => {
-            const distance = Math.hypot(point.x - otherPoint.x, point.y - otherPoint.y);
-            if (distance < 150) {
-              ctx.moveTo(point.x, point.y);
-              ctx.lineTo(otherPoint.x, otherPoint.y);
-            }
-          });
-        });
-        ctx.stroke();
-  
-        // Dessiner les triangles
-        points.value.forEach(point => {
-          drawTriangle(point.x, point.y, 3, point.angle);
-        });
-      };
+  points.value.forEach((point, i) => {
+    points.value.slice(i + 1).forEach(otherPoint => {
+      const distance = Math.hypot(point.x - otherPoint.x, point.y - otherPoint.y);
+      if (distance < 150) {
+        ctx!.moveTo(point.x, point.y);
+        ctx!.lineTo(otherPoint.x, otherPoint.y);
+      }
+    });
+  });
+  ctx!.stroke();
+
+  // Dessiner les triangles
+  points.value.forEach(point => {
+    drawTriangle(point.x, point.y, 3, point.angle);
+  });
+};
+
+
   
       // Mettre à jour les positions
       const updatePoints = () => {
